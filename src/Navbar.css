@@ -1,0 +1,82 @@
+/* Basic styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Ensure the links are centered vertically */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center; /* Center the bars horizontally */
+    justify-content: center; /* Center the bars vertically */
+    height: 100%; /* Ensure it takes the full height of the navbar */
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: #333;
+        position: absolute;
+        top: 9.5%;
+        height: 90%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links.open:hover {
+        color: aqua;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Active link styling */
+.active a {
+    font-weight: bold;
+}
+

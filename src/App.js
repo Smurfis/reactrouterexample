@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Navbar from "./Navbar.js"
+import HeaderComponent from './components/HeaderComponent.js'; // Correct path to HeaderComponent
+//pages
+import AboutReiki from "./pages/AboutReiki"
+import AboutUs from "./pages/AboutUs"
+import EssentialOilSprays from "./pages/EssentialOilSprays"
+import Home from "./pages/Home"
+import Prices from "./pages/Prices"
+import Reviews from "./pages/Reviews"
+import SoundBathHealing from "./pages/SoundBathHealing"
+import { Route, Routes } from "react-router-dom"
+//app
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Navbar />
+    <div className="container">
+      <Routes>
+      <Route path="/" element={<Home />} />
+        <Route path="/AboutReiki" element={<AboutReiki />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/EssentialOilSprays" element={<EssentialOilSprays />} />
+        <Route path="/Prices" element={<Prices />} />
+        <Route path="/Reviews" element={<Reviews />} />
+        <Route path="/SoundBathHealing" element={<SoundBathHealing />} />
+      </Routes>
     </div>
-  );
+    </>
+  )
 }
 
 export default App;

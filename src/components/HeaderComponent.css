@@ -1,0 +1,43 @@
+/* src/components/HeaderComponent.css */
+
+:root {
+--bluefont: #2272cf;
+--white: #FFFFFF;
+}
+
+.headerComponent {
+    text-align: center;
+}
+
+  .centered {
+    margin: auto;
+    width: 50%;
+  }
+
+  .header {
+    background-color: var(--white); /* Black background for divider */
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    max-width: 100px; /* Adjust size as needed */
+  }
+  
+  .divider {
+    height: 0px;
+    background-color: var(--white); /* White divider */
+    margin: 20px 0;
+  }
+  
+  .message {
+    color: var(--bluefont);
+    font-size: 2.4em;
+    margin: 0;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
